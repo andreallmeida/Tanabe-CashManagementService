@@ -1,0 +1,17 @@
+@server = http://localhost:4006
+@auth = Authorization: Basic alice:
+
+
+### Action for Upload Content
+# @name FileContent_ACTION
+POST  {{server}}/FileManagement/fileUpload
+Content-Type: application/json
+{{auth}}
+
+{
+  "fileDetail": {
+    "fileName": "NomeDoArquivo.csv",
+    "fileType": "text/csv",
+    "fileContent": "Data do Pagamento,Bandeira,Numero Cartão,Modalidade,Terminal,Estabelecimento Comercial,Valor Bruto Venda,Numero Sequencial Unico,Numero de AutorizaÃ§Ã£o,Parcela,CartÃ£o Estrangeiro\n01/08/2024,MASTERCARD,**************7163,CrÃ©dito de 2 a 6 Parcelas,2208255,12036655,R$ 551.00,66631202,92535647,1/2,NÃ£o\n01/09/2024,MASTERCARD,**************7163,CrÃ©dito de 2 a 6 Parcelas,19146702,45495790,R$ 747.00,35808100,29548155,2/2,NÃ£o\n01/09/2024,MASTERCARD,**************8756,CrÃ©dito de 2 a 6 Parcelas,87526153,59741537,R$ 876.00,60960735,48177543,2/2,NÃ£o\n02/09/2024,MASTERCARD,**************9987,CrÃ©dito de 2 a 6 Parcelas,14962681,77912650,R$ 538.00,8732775,7245665,1/2,NÃ£o\n02/09/2024,MASTERCARD,**************9987,CrÃ©dito de 2 a 6 Parcelas,59894762,32907861,R$ 604.00,70578486,77766113,2/2,NÃ£o\n02/09/2024,MASTERCARD,**************9987,CrÃ©dito de 2 a 6 Parcelas,31006601,46009873,R$ 753.00,48053690,35214755,2/2,NÃ£o"
+  }
+}
