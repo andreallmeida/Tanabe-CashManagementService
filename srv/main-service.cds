@@ -7,8 +7,12 @@ service FileManagement @(path: '/FileManagement') {
     entity FileContent as projection on my.FileContent;
 
     action fileUpload(fileDetail : {
-        fileName   : String;
-        fileType   : String;
-        fileContent: String;
+        fileName : String;
+        fileType : String;
+        fileContent : String;
     })
-}
+};
+
+service Transactions @(path: '/Transaction') {
+    entity BankTransactions as projection on my.BankTransactions;
+};
