@@ -33,7 +33,7 @@ entity FileContent  : cuid, managed{
 @Capabilities.InsertRestrictions.Insertable: true
 @Capabilities.DeleteRestrictions.Deletable : true
 @Capabilities.ReadRestrictions.Readable    : true
-entity BankTransactions : cuid, managed {
+entity BankTransactions : cuid, managed{
 
     paymentDate            : Date;
     cardFlag               : TY_cardFlag;
@@ -52,7 +52,7 @@ entity BankTransactions : cuid, managed {
 //
 // Generic Types
 //
-type TY_cardFlag : String enum {
+type TY_cardFlag : String enum{
     MasterCard;
     Visa;
     Amex;
