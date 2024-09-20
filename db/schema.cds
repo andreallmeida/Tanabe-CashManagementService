@@ -24,3 +24,36 @@ entity FileContent  : cuid, managed{
     content          : String; 
     header           : Association to FileHeader;
 }
+
+//
+// Entity: bankTransaction
+//
+@odata.draft.enabled
+@Capabilities.UpdateRestrictions.Updatable : true
+@Capabilities.InsertRestrictions.Insertable: true
+@Capabilities.DeleteRestrictions.Deletable : true
+@Capabilities.ReadRestrictions.Readable    : true
+entity BankTransactions : cuid, managed {
+
+    paymentDate            : Date;
+    cardFlag               : TY_cardFlag;
+    cardNumber             : String;
+    modality               : String;
+    terminalNumber         : Integer64;
+    comercialInstitute     : Integer64;
+    grossValue             : Double;
+    netValue               : Double;
+    uniqueSequentialNumber : Integer64;
+    authorizationNumber    : Integer64;
+    currentPortion         : String;
+    foreignCard            : Boolean;
+}
+
+//
+// Generic Types
+//
+type TY_cardFlag : String enum {
+    MasterCard;
+    Visa;
+    Amex;
+}

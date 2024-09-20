@@ -12,3 +12,7 @@ service FileManagement @(path: '/FileManagement') {
         fileContent: String;
     })
 }
+
+service Transactions @(path: '/Transaction') {
+    entity BankTransactions as projection on my.BankTransactions;
+};
