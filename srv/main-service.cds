@@ -2,6 +2,8 @@
 
 using {tanabe.cashmanagement as my} from '../db/schema';
 
+
+// File Management Entity
 service FileManagement @(path: '/FileManagement') {
     entity FileHeader  as projection on my.FileHeader;
     entity FileContent as projection on my.FileContent;
@@ -13,6 +15,7 @@ service FileManagement @(path: '/FileManagement') {
     })
 }
 
-service Transactions @(path: '/Transaction') {
-    entity BankTransactions as projection on my.BankTransactions;
+// BankTransaction Entity
+service BankTransaction @(path: '/BankTransaction') {
+    entity BankTransaction as projection on my.BankTransaction;
 };

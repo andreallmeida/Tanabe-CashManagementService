@@ -33,7 +33,7 @@ entity FileContent  : cuid, managed{
 @Capabilities.InsertRestrictions.Insertable: true
 @Capabilities.DeleteRestrictions.Deletable : true
 @Capabilities.ReadRestrictions.Readable    : true
-entity BankTransactions : cuid, managed{
+entity BankTransaction : cuid, managed{
 
     paymentDate            : Date;
     cardFlag               : TY_cardFlag;

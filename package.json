@@ -6,18 +6,21 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^8",
-    "express": "^4",
     "@cap-js/hana": "^1",
-    "@sap/xssec": "^4"
+    "@sap/cds": "^8",
+    "@sap/hdi-deploy": "^5.2.3",
+    "@sap/xssec": "^4",
+    "express": "^4"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.6",
     "@cap-js/sqlite": "^1",
-    "@sap/cds-dk": "^8"
+    "@sap/cds-dk": "^8",
+    "@sap/ux-specification": "UI5-1.128"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "watch-transactionmanagement": "cds watch --open transactionmanagement/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "[production]": {
@@ -25,5 +28,8 @@
         "auth": "xsuaa"
       }
     }
-  }
+  },
+  "sapux": [
+    "app/transactionmanagement"
+  ]
 }
