@@ -10,7 +10,8 @@
     "@sap/cds": "^8",
     "@sap/hdi-deploy": "^5.2.3",
     "@sap/xssec": "^4",
-    "express": "^4"
+    "express": "^4",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.6",
